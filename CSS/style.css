@@ -37,15 +37,43 @@
 }
 .right-part {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  align-items: center;
   position: relative;
   width: 60%;
 
-  height: 40px;
+  gap: 20px;
+  height: 50px;
+  /* background-color: aqua; */
 }
 .left-part {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
   width: 40%;
-  height: 40px;
+  height: 50px;
+  align-items: flex-end;
+  font-size: 1.7rem;
+
+  /* background-color: aquamarine; */
+  color: var(--text-color);
+}
+.contact-icon {
+  margin-right: 20px;
+  color: black;
+}
+.phone {
+  margin-left: 70px;
+  /* color: var(--text-color); */
+  color: black;
+  font-weight: 600;
+}
+i {
+  margin-right: 10px;
+}
+.location {
+  /* color: var(--text-color); */
+  color: black;
+  font-weight: 600;
 }
