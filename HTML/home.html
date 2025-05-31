@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="../CSS/style.css">
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+crossorigin="anonymous"
+referrerpolicy="no-referrer"
+/>
+<title>Sarwari  Website</title>
+
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">Sarwari Hospital</div>
+      <div class="hamburger" id="hamburger" aria-label="Toggle menu" tabindex="0">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="nav-links" id="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#appointments">Appointments</a>
+        <a href="#contact">Contact Us</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- icons and address -->
+
+
+<main>
+  <div class="up-nav">
+    <div class="right-part">
+      <i class="fa-solid fa-phone-volume"></i><a href="#"  id="phone" class="address"
+        >+93 78434</a
+      >
+       <i class="fa-solid fa-location-dot"></i><a href="#" class="address" id ="location">
+       Kunduz City </a
+      >
+    </div>
+  
+    <div class="left-part">
+      <a href="#" " class="contact-icon"
+        ><i class="fa-brands fa-facebook"></i
+      ></a>
+      <a href="#" class="contact-icon"
+        ><i class="fa-brands fa-whatsapp"></i
+      ></a>
+      <a href="#" id="f_icon" class="contact-icon"
+        ><i class="fa-brands fa-instagram"></i
+      ></a>
+    </div>
+  </div>
+  <section id="home" tabindex="-1">
+    <div class="content" role="main">
+      <h1 class="hometext" >Welcome to Sawari Hospital</h1>
+      <p class="hometext">Your health is our priority. Compassionate care with advanced medical expertise.</p>
+      <div class="homebotton">
+      <a href="#appointments" class="btn">Book an Appointment</a>
+      <a href="#appointments" class="btn">DEPARTMENTS</a>
+    </div>
+    </div>
+  </section>
+
+  
+
+<script>
+  // Mobile menu toggle
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+
+  // Close menu on link click (mobile)
+  [...navLinks.querySelectorAll('a')].forEach(link => {
+    link.addEventListener('click', () => {
+      if (navLinks.classList.contains('open')) {
+        navLinks.classList.remove('open');
+      }
+    });
+  });
+
+  // Keyboard accessibility for hamburger
+  hamburger.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      navLinks.classList.toggle('open');
+    }
+  });
+</script>
+</body>
+</html>

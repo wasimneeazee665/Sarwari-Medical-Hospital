@@ -1,56 +1,129 @@
-* {
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-  text-decoration: none;
+/* Reset and base styles */
+html {
   scroll-behavior: smooth;
-  list-style: none;
 }
-:root {
-  --text-color: #fff;
-  --bg-color: #1b1f24;
-  --second-bg-color: #22282f;
-  --main-color: #13bbff;
-  --other-color: #c3cad5;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #f9fafd;
+  color: #333;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
 
-  --h1-font: 4.5rem;
-  --h2-font: 2.9rem;
-  --p-font: 1rem;
+/* Navbar */
+header {
+  background-color: #007bff;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.15);
 }
-/* this ups navbar part */
-.main {
-  background-color: aqua;
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  user-select: none;
+}
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+.nav-links a {
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: #0056b3;
+}
 
-  height: 100vh;
-  width: 100%;
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
 }
-#back-photo {
-  height: 100vh;
-  width: 100%;
-  background-image: url(../assets/back2.jpg);
-  background-size: cover;
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
 }
+
+/* Responsive nav - mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 56px;
+    right: 0;
+    background-color: #007bff;
+    height: calc(100% - 56px);
+    width: 200px;
+    flex-direction: column;
+    padding-top: 30px;
+    gap: 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+  }
+  .nav-links.open {
+    transform: translateX(0);
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+/* icons */
+
 .up-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #f9fafd;
 }
 .right-part {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   position: relative;
-  width: 60%;
+  width: 800px;
   font-size: var(--p-font);
   gap: 10px;
   height: 50px;
+  margin-left: 170px;
   /* background-color: aqua; */
 }
 #phone {
   margin-left: 80px;
   /* color: var(--text-color); */
-  color: black;
+  color: #007bff;
   font-weight: 600;
 }
 .fa-phone-volume {
@@ -60,154 +133,120 @@
 
 #location {
   /* color: var(--text-color); */
-  color: black;
+  color: #007bff;
   font-weight: 600;
 }
 .address {
   height: 20px;
 }
 .address:hover {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgb(19, 19, 19);
 }
 .left-part {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 25px;
-  width: 40%;
+  width: 800;
   height: 50px;
   font-size: 1.7rem;
   /* background-color: aquamarine; */
   color: var(--text-color);
+  margin-right: 260px;
 }
-#f_icon {
-  margin-right: 9rem;
-}
+
 .contact-icon {
-  color: black;
+  color: #007bff;
 }
 .contact-icon:hover {
   transition: 0.3s ease;
   color: var(--text-color);
 }
-
-/* 
-this part belong to 
-navbar
-we are designing 
-that how a great 
-navbar creat
-
-
-
-*/
-nav {
-  position: fixed;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  /* background-color: blueviolet; */
-  height: 75px;
+@media (max-width: 768px) {
+  .right-part {
+    display: none;
+  }
+  .left-part {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 300px;
+  }
 }
-.logo {
-  margin-right: 30rem;
-  /* color: var(--text-color); */
-  color: var(--bg-color);
+
+/* Section styles */
+section {
+  padding: 60px 0 40px;
+}
+section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+section p.lead {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  text-align: center;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+/* Home Section */
+#home {
+  background: url("../assets/young-handsome-physician-medical-robe-with-stethoscope.jpg")
+    no-repeat center center/cover;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  position: relative;
+  border: 1px solid black;
+}
+#home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+#home .content {
+  position: relative;
+  text-align: center;
+  max-width: 700px;
+  z-index: 2;
+}
+#home .content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.8rem;
+}
+#home .content p {
   font-size: 1.3rem;
 }
-span {
-  font-size: 2rem;
-  color: var(--main-color);
+#home .btn {
+  margin-top: 30px;
+  background-color: #0056b3;
+  padding: 12px 30px;
+  color: white;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: background-color 0.3s;
+  display: inline-block;
 }
-.nav_bar {
-  /* background-color: #13bbff; */
-  width: 40%;
-  display: flex;
-  justify-content: space-evenly;
-  /* align-items: center; */
+#home .btn:hover {
+  background-color: #003d7a;
 }
-.nav_link {
-  /* color: var(--text-color); */
-  color: var(--bg-color);
-  font-size: var(--p-font);
-  font-weight: 540;
-}
-#home {
-  color: var(--text-color);
-}
-#home:hover {
-  color: var(--bg-color);
-  transition: 0.3s ease;
-}
-.nav_link:hover {
-  color: var(--text-color);
-  transition: 0.3s ease;
-}
-/* 
-*******
-??????
-
-going for next part 
-design full home page
-
-???
-*****************
- */
-.main_card {
-  position: relative;
-  left: 6rem;
-  top: 8rem;
-  background-color: var(--text-color);
-
-  width: 60%;
-  height: 70vh;
-  border-radius: 20px;
+.content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-}
-.homeC_text {
-  position: relative;
-  left: 2rem;
-
-  /* background-color: blueviolet; */
-  bottom: 5rem;
-  width: 94%;
-}
-.titel_card {
-  font-size: 1.7rem;
-  margin-bottom: 10px;
-}
-.text_card {
-  font-size: 3.4rem;
-  font-weight: 800;
-}
-/* tow home battones */
-.batton_card {
-  position: relative;
-  right: 10.8rem;
-  display: flex;
-  gap: 50px;
-}
-.home_batton {
-  height: 75px;
-  width: 200px;
-  border: 1px solid black;
-  border-radius: 10px;
-  display: flex;
   justify-content: center;
-  align-items: center;
-}
-#def_batton {
-  width: 300px;
-  background-color: var(--main-color);
-}
-#def_batton:hover {
-  transition: 0.3s ease;
-  background-color: transparent;
-}
-.home_batton:hover {
-  background-color: var(--main-color);
+  background-color: color-mix(in srgb, #f9fafd 50%, transparent);
+  /* opacity: 0.7; */
+  border-radius: 20px;
+  width: 900px;
+  height: 400px;
 }
