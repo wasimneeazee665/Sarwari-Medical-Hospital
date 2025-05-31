@@ -11,6 +11,7 @@ integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+
 crossorigin="anonymous"
 referrerpolicy="no-referrer"
 />
+<link rel="stylesheet" href="../CSS/contuct.css">
 <title>Sarwari  Website</title>
 
 </head>
@@ -38,33 +39,8 @@ referrerpolicy="no-referrer"
 
 
 
-<!-- icons and address -->
-
-
-<!-- <main>
-  <div class="up-nav">
-    <div class="right-part">
-      <i class="fa-solid fa-phone-volume"></i><a href="#"  id="phone" class="address"
-        >+93 78434</a
-      >
-       <i class="fa-solid fa-location-dot"></i><a href="#" class="address" id ="location">
-       Kunduz City </a
-      >
-    </div>
-  
-    <div class="left-part">
-      <a href="#" " class="contact-icon"
-        ><i class="fa-brands fa-facebook"></i
-      ></a>
-      <a href="#" class="contact-icon"
-        ><i class="fa-brands fa-whatsapp"></i
-      ></a>
-      <a href="#" id="f_icon" class="contact-icon"
-        ><i class="fa-brands fa-instagram"></i
-      ></a>
-    </div>
-  </div> -->
   <!-- home part -->
+   <!-- icons and address -->
    <div class="bkg_photo">
     <main>
       <div class="up-nav">
@@ -91,7 +67,7 @@ referrerpolicy="no-referrer"
       </div>
   <section id="home" tabindex="-1">
     <div class="content" role="main">
-      <h1 class="hometext" >Welcome to Sawari Hospital</h1>
+      <h1 class="hometext" >Welcome to Sarwari Hospital</h1>
       <p class="hometext">Your health is our priority. Compassionate care with advanced medical expertise.</p>
       <div class="homebotton">
       <a href="#appointments" class="btn">Book an Appointment</a>
@@ -100,6 +76,59 @@ referrerpolicy="no-referrer"
     </div>
   </section>
 </div>
+
+<!--
+
+contuct us
+ 
+
+-->
+<section id="appointments">
+  <h2>Book an Appointment</h2>
+  <div class="form-wrapper">
+    <form action="#" method="post" novalidate>
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Your full name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="example@email.com" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="+93 785555455" required />
+
+      <label for="service">Select Service</label>
+      <select id="service" name="service" required>
+        <option value="" disabled selected>Select a service</option>
+        <option value="emergency">Emergency Care</option>
+        <option value="cardiology">Cardiology</option>
+        <option value="maternity">Maternity & Childcare</option>
+        <option value="orthopedics">Orthopedics</option>
+        <option value="radiology">Radiology</option>
+        <option value="neurology">Neurology</option>
+      </select>
+
+      <label for="date">Preferred Date</label>
+      <input type="date" id="date" name="date" required />
+
+      <button type="submit">Submit Appointment</button>
+    </form>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <div class="contact-info" tabindex="0">
+    <p><strong>Address:</strong> Kundoz Afghanistan behind the saddat high school </p>
+
+    <p><strong>Email:</strong> contact@sarwarihospital.com</p>
+    <p><strong>Working Hours:</strong> Mon - Fri: 8am - 6pm, Sat: 9am - 2pm</p>
+  </div>
+</section>
+</main>
+
+<footer>
+&copy; 2024 Sarwari Hospital. All rights reserved.
+</footer>
 
   
 
