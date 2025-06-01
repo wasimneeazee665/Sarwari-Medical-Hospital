@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="../CSS/style.css">
+<link rel="stylesheet" href="../CSS/home.css">
 <link
 rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -19,10 +19,13 @@ referrerpolicy="no-referrer"
 
 </head>
 <body>
+  <!-- 
+  nav bar
+    -->
 <header>
   <div class="container">
     <nav>
-      <div class="logo">Sarwari Hospital</div>
+      <div class="logo"> <span>Sarwari</span> MedCar</div>
       <div class="hamburger" id="hamburger" aria-label="Toggle menu" tabindex="0">
         <div></div>
         <div></div>
@@ -221,31 +224,6 @@ contuct us
 
   
 
-<script>
-  // Mobile menu toggle
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
-
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-  });
-
-  // Close menu on link click (mobile)
-  [...navLinks.querySelectorAll('a')].forEach(link => {
-    link.addEventListener('click', () => {
-      if (navLinks.classList.contains('open')) {
-        navLinks.classList.remove('open');
-      }
-    });
-  });
-
-  // Keyboard accessibility for hamburger
-  hamburger.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      navLinks.classList.toggle('open');
-    }
-  });
-</script>
+<script src="../js/respon.js"></script>
 </body>
 </html>
