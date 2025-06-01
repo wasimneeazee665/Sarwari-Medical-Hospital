@@ -1,0 +1,10 @@
+#about .content-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+#about p {
+  margin-top: 12px;
+  font-size: 1.15rem;
+  text-align: center;
+}
